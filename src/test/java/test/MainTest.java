@@ -41,8 +41,13 @@ public class MainTest {
         main.solve("1 * 5/0".split("\\s+"));
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test(expected = ArithmeticException.class)
     public void fraction8() {
+        main.solve("1 / 0/5".split("\\s+"));
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void fraction9() {
         main.solve("1 * 5/0 +".split("\\s+"));
     }
 
