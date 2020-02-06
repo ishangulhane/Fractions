@@ -30,7 +30,7 @@ public class Fraction {
 
     public Fraction divide(Fraction b) {
         if (b.numerator == 0) {
-            throw new ArithmeticException("Error : Divide by 0");
+            throw new ArithmeticException("Divide by 0");
         }
         return new Fraction(this.numerator * b.denominator, this.denominator * b.numerator);
     }
