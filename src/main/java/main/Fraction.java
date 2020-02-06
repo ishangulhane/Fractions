@@ -35,14 +35,6 @@ public class Fraction {
         return new Fraction(this.numerator * b.denominator, this.denominator * b.numerator);
     }
 
-    private void reduce(long num, long deno) {
-        long gcd = gcd(Math.abs(num), deno);
-        if (gcd != 0) {
-            this.numerator = this.numerator / gcd;
-            this.denominator = this.denominator / gcd;
-        }
-    }
-
     private long lcm(long a, long b) {
         return Math.abs(a * b) / gcd(a, b);
     }
